@@ -3,16 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://pg29JulianDSilva.github.io/GithubActionsDeployReactTest",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pg29JulianDSilva/GithubActionsDeployReactTest.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pg29JulianDSilva/GithubActionsDeployReactTest/issues"
+  },
+  "homepage": "https://pg29JulianDSilva.github.io/GithubActionsDeployReactTest/",
+  "dependencies": {
+    "build": "^0.1.4"
+  },
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
