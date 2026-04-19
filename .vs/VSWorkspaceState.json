@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ForthTestReactPipeline"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\ForthTestReactPipeline\\vite.config.ts",
   "PreviewInSolutionExplorer": false
 }
