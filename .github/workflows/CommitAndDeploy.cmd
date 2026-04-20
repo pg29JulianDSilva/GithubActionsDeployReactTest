@@ -5,6 +5,15 @@ cd..
 
 git init
 
+set /i status=git status
+
+if "%status%"=="nothing to commit, working tree clean" (
+	echo "No changes to commit."
+	exit()
+) else (
+	echo "Changes detected. Proceeding with commit and deploy."
+)
+
 git pull origin main
 
 git add .
