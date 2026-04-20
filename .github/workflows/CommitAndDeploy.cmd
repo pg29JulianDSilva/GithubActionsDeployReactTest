@@ -6,11 +6,11 @@ cd..
 
 git init
 
-set /i status=git status
+for /f "tokens=*" %%i in ('git status') do set "status=%%i"
 
 if "%status%"=="nothing to commit, working tree clean" (
 	echo "No changes to commit."
-	exit /b 0
+	exit /b
 ) else (
 	echo "Changes detected. Proceeding with commit and deploy."
 )
@@ -29,4 +29,4 @@ npm run deploy
  
 echo "Done"
 pause "Press any key to continue..."
-exit/b 0
+exit/b
