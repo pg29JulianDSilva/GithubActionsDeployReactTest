@@ -1,3 +1,4 @@
+echo off
 
 cd..
 
@@ -9,7 +10,7 @@ set /i status=git status
 
 if "%status%"=="nothing to commit, working tree clean" (
 	echo "No changes to commit."
-	exit()
+	exit /b 0
 ) else (
 	echo "Changes detected. Proceeding with commit and deploy."
 )
@@ -28,4 +29,4 @@ npm run deploy
  
 echo "Done"
 pause "Press any key to continue..."
-exit()
+exit/b 0
