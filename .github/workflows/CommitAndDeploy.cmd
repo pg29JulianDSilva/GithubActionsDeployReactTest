@@ -1,4 +1,3 @@
-@echo off
 
 cd..
 
@@ -15,5 +14,7 @@ git commit -m "FirstTestPipelines"
 git push origin main
 
 npm run deploy
-
+ 
+echo "Done"
 pause
+exit()
