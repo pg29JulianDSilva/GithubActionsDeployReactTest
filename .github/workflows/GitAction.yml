@@ -29,6 +29,6 @@ jobs:
 
           - name: Run CMD script
             shell: cmd
-            run: cmd /c ".github/scripts/CommitAndDeploy.cmd"
+            run: ".github/scripts/CommitAndDeploy.cmd"
             env:
               COMMIT_NAME: ${{ github.event.inputs.commitMessage }}
