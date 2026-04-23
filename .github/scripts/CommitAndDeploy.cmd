@@ -5,8 +5,6 @@ cd..
 
 echo starting commit and deploy process...
 
-git init
-
 if %ERRORLEVEL% NEQ 0 (
     echo There was an error, please check the error and remember:
     echo - Ensure you have the correct permissions.
