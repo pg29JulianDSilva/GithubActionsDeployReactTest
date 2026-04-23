@@ -2,17 +2,6 @@ echo off
 
 echo starting commit and deploy process...
 
-git config user.email "actions@github.com"
-git config user.name "GitHub Actions"
-
-if %ERRORLEVEL% NEQ 0 (
-    echo There was an error, please check the error and remember:
-    echo - Ensure you have the correct permissions.
-    echo - Ensure you have saved all the changes before running this script.
-    echo - Ensure you have a stable internet connection.
-    pause
-    exit /b
-)
 
 git fetch origin main
 
@@ -56,7 +45,10 @@ if %ERRORLEVEL% NEQ 0 (
     exit /b
 )
 
-git commit -m "%COMMIT_NAME%"
+set /p commitName="Enter commit message:"
+
+git commit -m "%commitName%"
+
 
 if %ERRORLEVEL% NEQ 0 (
     echo There was an error, please check the error and remember:
