@@ -1,8 +1,5 @@
 echo off
 
-cd..
-cd..
-
 echo starting commit and deploy process...
 
 if %ERRORLEVEL% NEQ 0 (
