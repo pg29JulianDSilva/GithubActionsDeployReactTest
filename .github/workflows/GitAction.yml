@@ -1,0 +1,25 @@
+name: Git Action Call
+on: 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+        
+          
+    
+jobs:
+    run-windows-script:
+        runs-on: windows-latest
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v4
+
+          - name: Run CMD script
+            run: cmd /c "CommitAndDeploy.cmd"
