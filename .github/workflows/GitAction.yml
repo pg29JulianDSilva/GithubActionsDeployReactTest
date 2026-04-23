@@ -28,6 +28,6 @@ jobs:
             uses: actions/checkout@v4
 
           - name: Run CMD script
-            run: cmd /c "CommitAndDeploy.cmd"
+            run: cmd /c "github/workflows/CommitAndDeploy.cmd"
             env:
               COMMIT_NAME: ${{ github.event.inputs.commitMessage }}
